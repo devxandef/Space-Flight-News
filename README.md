@@ -9,12 +9,10 @@ Esse projeto tem o objetivo de exibir os dados dos artigos da API Space Flight N
  ReactJS - Framework javascript front-end
  MaterialUI - biblioteca gráfica
 
-No diretório do projeto, você pode executar:
-### `npm install`
-instala as dependências do projeto
-### `npm start`
-Executa o aplicativo no modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
+### No diretório do projeto, você pode executar:
+### `npm install` instala as dependências do projeto
 
+### `npm start`
+um link ira abrir no seu navegador, redicionando para o projeto.
 
 This is a challenge by Coodesh
