@@ -10,9 +10,9 @@ Esse projeto tem o objetivo de exibir os dados dos artigos da API Space Flight N
  MaterialUI - biblioteca gráfica
 
 ### No diretório do projeto, você pode executar:
-### `npm install` instala as dependências do projeto
+### `npm install`  - instala as dependências do projeto
 
-### `npm start`
+### `npm start` - executa o projeto
 um link ira abrir no seu navegador, redicionando para o projeto.
 
 This is a challenge by Coodesh
