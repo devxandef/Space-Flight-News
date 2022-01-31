@@ -6,8 +6,8 @@ Esse projeto tem o objetivo de exibir os dados dos artigos da API Space Flight N
 
 ### Tecnologias
 
- # ReactJS - Framework javascript front-end
- # MaterialUI - biblioteca gráfica
+ ReactJS - Framework javascript front-end
+ MaterialUI - biblioteca gráfica
 
 No diretório do projeto, você pode executar:
 ### `npm install`
