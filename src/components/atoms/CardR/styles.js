@@ -3,15 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  height: auto;
-  flex-direction: column;
-  align-items: center;
+  height: 150px;
+  align-content: center;
 `;
 
 export const HeaderControls = styled.div`
   display: flex;
   margin-top: 20px;
-  margin-right: 40px;
   width: 100%;
-  justify-content: flex-end;
 `;

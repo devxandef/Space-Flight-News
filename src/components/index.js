@@ -1,4 +1,4 @@
 export * from "./atoms";
-// export * from "./molecules";
+export * from "./Molecules";
 // export * from "./organisms";
 export * from "./Templates";

@@ -1,6 +1,6 @@
 import React from "react";
 import * as Style from "./styles";
-function Divider({ setAllArticles, allArticles, allArticlesBack }) {
+function Divider() {
   return <Style.Container />;
 }
 

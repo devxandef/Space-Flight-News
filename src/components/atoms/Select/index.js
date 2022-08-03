@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 
@@ -6,17 +6,19 @@ function Select({ allArticles, setAllArticles }) {
   return (
     <Autocomplete
       onChange={(event, newValue) => {
-        let rev = allArticles;
-        if (newValue === null) setAllArticles(allArticles);
-        else {
-          if (newValue === "Mais novas") {
-            setAllArticles(allArticles);
-          } else {
-            if (newValue === "Mais antigas") {
-              let reveresed = [...rev].reverse();
-              setAllArticles(reveresed);
-            }
-          }
+        if (newValue === "Mais novas") {
+          const sortedDesc = allArticles.sort(
+            (objA, objB) =>
+              new Date(objB.publishedAt) - new Date(objA.publishedAt)
+          );
+          setAllArticles(sortedDesc);
+        }
+        if (newValue === "Mais antigas") {
+          const sortedDesc = allArticles.sort(
+            (objA, objB) =>
+              new Date(objA.publishedAt) - new Date(objB.publishedAt)
+          );
+          setAllArticles(sortedDesc);
         }
       }}
       id="disabled-options-demo"
