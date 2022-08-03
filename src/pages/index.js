@@ -4,7 +4,7 @@ import { Container, Header } from "../components";
 function Layout() {
   return (
     <Container>
-      <Header></Header>
+      <Header />
     </Container>
   );
 }
