@@ -1,3 +1,3 @@
 import ListArticles from "./ListArticles";
-
-export { ListArticles };
+import DescriptionContent from "./DescriptionContent";
+export { ListArticles, DescriptionContent };

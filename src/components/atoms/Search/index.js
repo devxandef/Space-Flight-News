@@ -11,7 +11,12 @@ function Search({ setAllArticles, allArticles, allArticlesBack }) {
         if (newValue === null) setAllArticles(allArticlesBack);
         else {
           let value = allArticles.filter((el) => el.title === newValue);
-          setAllArticles(value);
+          const ids = value.map((o) => o.id);
+          const filtered = value.filter(
+            ({ id }, index) => !ids.includes(id, index + 1)
+          );
+
+          setAllArticles(filtered);
         }
       }}
       options={allArticles.map((option) => option.title)}

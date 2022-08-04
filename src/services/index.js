@@ -2,7 +2,7 @@ import axios from "axios";
 
 axios.interceptors.request.use(
   function (config) {
-    config.baseURL = "https://api.spaceflightnewsapi.net/v3";
+    config.baseURL = `${process.env.REACT_APP_BASE_URL}`;
     return config;
   },
   function (error) {

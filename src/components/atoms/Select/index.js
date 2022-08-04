@@ -1,28 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 
-function Select({ allArticles, setAllArticles }) {
+function Select({ setOption }) {
   return (
     <Autocomplete
-      onChange={(event, newValue) => {
-        if (newValue === "Mais novas") {
-          const sortedDesc = allArticles.sort(
-            (objA, objB) =>
-              new Date(objB.publishedAt) - new Date(objA.publishedAt)
-          );
-          setAllArticles(sortedDesc);
-        }
-        if (newValue === "Mais antigas") {
-          const sortedDesc = allArticles.sort(
-            (objA, objB) =>
-              new Date(objA.publishedAt) - new Date(objB.publishedAt)
-          );
-          setAllArticles(sortedDesc);
-        }
-      }}
+      onChange={(event, newValue) => setOption(newValue)}
       id="disabled-options-demo"
-      options={["Mais antigas", "Mais novas"]}
+      options={["Mais novas", "Mais antigas"]}
       sx={{ width: 300 }}
       renderInput={(params) => <TextField {...params} label={"Filtrar"} />}
     />
