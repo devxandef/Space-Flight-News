@@ -2,7 +2,7 @@ import React from "react";
 import { CardL, CardR } from "../../";
 import * as Style from "./styles";
 
-function ListArticles({ allArticles, openModalItem, setCurrentItem }) {
+function ListArticles({ allArticles, openModalItem, error }) {
   return (
     <Style.Container>
       {Array.isArray(allArticles) &&
@@ -21,6 +21,12 @@ function ListArticles({ allArticles, openModalItem, setCurrentItem }) {
             />
           )
         )}
+
+      {error && (
+        <div style={{ fontWeight: "bold", fontSize: 20, textAlign: "center" }}>
+          Erro ao carregar notícias!
+        </div>
+      )}
     </Style.Container>
   );
 }

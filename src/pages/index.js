@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Container,
   Header,
@@ -7,6 +8,7 @@ import {
   Logo,
   DescriptionContent,
 } from "../components";
+import { useLocation } from "react-router-dom";
 import { useFetchActicles } from "../hooks/useFetchArticles";
 import LoadingButton from "@mui/lab/LoadingButton";
 
@@ -15,6 +17,9 @@ function Layout() {
   const [openModal, setOpenModal] = React.useState(false);
   const [currentItem, setCurrentItem] = React.useState(null);
   const [searchFilter, setSearchFilter] = React.useState(null);
+  const sr = useLocation().search;
+  const search = new URLSearchParams(sr).get("search");
+  const filter = new URLSearchParams(sr).get("filter");
 
   return (
     <Container>
@@ -25,6 +30,7 @@ function Layout() {
       />
       <ListArticles
         allArticles={searchFilter === null ? data : searchFilter}
+        error={isError}
         openModalItem={(item) => {
           setCurrentItem(item);
           setOpenModal(true);

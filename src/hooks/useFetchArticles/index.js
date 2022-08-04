@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import api from "../../services";
 
 const useFetchActicles = () => {
@@ -10,7 +11,6 @@ const useFetchActicles = () => {
   const [op, setOp] = useState("");
 
   useEffect(() => {
-    alert(process.env.REACT_APP_BASE_URL);
     const fetchData = async () => {
       setIsError(false);
       setIsLoading(true);
